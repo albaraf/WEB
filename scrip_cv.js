@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Add a fade-in effect for all sections
+   
     const sections = document.querySelectorAll("section");
     sections.forEach(section => {
         section.classList.add("fade-in");
         setTimeout(() => section.style.opacity = 1, 200);
     });
 
-    // Make the header background color change on scroll
     window.addEventListener("scroll", function() {
         const header = document.querySelector("header");
         if (window.scrollY > 50) {
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Add scale effect on profile image hover
     const profileImg = document.querySelector(".profile-img");
     profileImg.addEventListener("mouseover", function() {
         profileImg.style.transform = "scale(1.1)";
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
         profileImg.style.transform = "scale(1)";
     });
 
-    // Smooth scrolling for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function(e) {
             e.preventDefault();
@@ -35,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Interactive message on clicking the header
     const heroText = document.querySelector(".hero h1");
     heroText.addEventListener("click", function() {
         alert("Terima kasih telah mengunjungi portofolio saya!");
