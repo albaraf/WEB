@@ -4,73 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Pertanian</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        nav {
-            background-color: #333;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Website Pertanian</h1>
-        <img src="image/bawang-merah.jpg" alt="Logo Pertanian">
+        <img src="image/download.jpeg" alt="Pertanian">
     </header>
     
     <nav>
@@ -88,9 +27,10 @@
         </section>
 
         <section id="content">
-            <h2>Informasi Barang/Jasa</h2>
-            <img src="image/40561783_2321963234485524_4018016375845945344_n.jpg" alt="Gambar Pertanian">
-            <p>Kami menyediakan berbagai produk pertanian, termasuk bibit, pupuk, dan alat pertanian. Silakan lihat tabel di bawah untuk informasi lebih lanjut.</p>
+            <h2>Informasi Produk</h2>
+            <img src="image/images.jpeg" alt="Gambar Pertanian">
+            <img src="image/download (1).jpeg" alt="Gambar Pertanian">
+            <p>Kami menyediakan berbagai produk pertanian, termasuk bibit, pupuk. Silakan lihat tabel di bawah untuk informasi lebih lanjut.</p>
             <table>
                 <tr>
                     <th>Nama Produk</th>
@@ -102,7 +42,11 @@
                     <td>Rp 50.000</td>
                     <td>Bibit unggul untuk hasil panen yang optimal.</td>
                 </tr>
-                
+                <tr>
+                    <td>Pupuk Organik</td>
+                    <td>Rp 75.000</td>
+                    <td>Pupuk organik adalah pupuk yang berasal dari bahan-bahan alami yang dapat meningkatkan kesuburan tanah.</td>
+                </tr>
             </table>
             <h3>Pesan Sekarang</h3>
             <form id="orderForm">
@@ -111,6 +55,7 @@
                 <label for="product">Produk:</label>
                 <select id="product" required>
                     <option value="bibit">Bibit Bawang Merah</option>
+                    <option value="pupuk">Pupuk Organik</option>
                 </select>
                 <button type="submit">Pesan</button>
             </form>
@@ -118,7 +63,8 @@
 
         <section id="about">
             <h2>About</h2>
-            <p>Kontak kami di: <a href="mailto:info@pertanian.com">albarabdullah99@gmail.com</a></p>
+            <p>Kontak kami di Email: <a href="mailto:info@pertanian.com">albarabdullah99@gmail.com</a></p>
+            <p>Kontak kami di No Telepon: <a href="tel:085607476094">085607476094</a></p>
         </section>
     </main>
 
@@ -126,11 +72,6 @@
         <p>&copy; 2023 Website Pertanian. Semua hak dilindungi.</p>
     </footer>
 
-    <script>
-        document.getElementById('orderForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const product = document.getElementById('product').value;
-
-            alert(`Terima kasih, ${name}! Anda telah memesan ${product}.`);
-        });
+    <script src="script.js"></script>
+</body>
+</html>

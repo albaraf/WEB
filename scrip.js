@@ -1,24 +1,15 @@
-// Fungsi untuk menampilkan section berdasarkan menu yang dipilih
-function showSection(sectionId) {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
+// Menangani event submit pada form pemesanan
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Mencegah pengiriman form secara default
   
-    const selectedSection = document.getElementById(sectionId);
-    selectedSection.classList.add('active');
-  }
-  
-  // Fungsi untuk mengolah form pemesanan
-  function submitForm(event) {
-    event.preventDefault();
-    const product = document.getElementById('product').value;
-    const quantity = document.getElementById('quantity').value;
-    alert(`Pesanan Anda untuk ${product} sejumlah ${quantity} telah diterima!`);
-  }
-  
-  // Menampilkan Home sebagai halaman default
-  document.addEventListener('DOMContentLoaded', () => {
-    showSection('home');
-  });
-  
+  // Mendapatkan nilai dari input nama dan produk
+  const name = document.getElementById('name').value;
+  const product = document.getElementById('product').value;
+
+  // Menampilkan pesan konfirmasi kepada pengguna
+  alert(`Terima kasih, ${name}! Anda telah memesan produk: ${product}.`);
+
+  // Mengosongkan input form setelah submit
+  document.getElementById('name').value = '';
+  document.getElementById('product').value = '';
+});
